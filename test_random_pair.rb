@@ -11,6 +11,10 @@ class TestRandomPairing < Minitest::Test
     	assert_equal(Array, pairing(["bill", "sally", "jim", "mary", "mike"]).class)
     end
 
+    def test_refute_that_input_is_same
+    	refute_equal(["bill", "sally", "jim", "mary", "mike"], pairing(["bill", "sally", "jim", "mary", "mike"]))
+    end
+
 end
 
     

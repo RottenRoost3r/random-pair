@@ -7,14 +7,15 @@ class TestRandomPairing < Minitest::Test
         assert_equal(1, 1)
     end
 
-    def test_that_input_is_array
-    	assert_equal(Array, pairing(["bill", "sally", "jim", "mary", "mike"]).class)
-    end
-
     def test_refute_that_input_is_same
     	refute_equal(["bill", "sally", "jim", "mary", "mike"], pairing(["bill", "sally", "jim", "mary", "mike"]))
     	refute_equal(["bill", "sally", "jim",], pairing(["bill", "sally", "jim",]))
     	refute_equal(["bill", "sally", "jim", "mary", "mike", "jack", "willie"], pairing(["bill", "sally", "jim", "mary", "mike", "jack", "willie"]))
+    end
+
+    def test_that_outcome_is_even_multi_array
+    	input = ["bill", "sally", "jim", "mary"]
+    	assert_equal(2, pairing(input).length)
     end
 end
 

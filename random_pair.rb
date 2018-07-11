@@ -1,3 +1,3 @@
 def pairing(input)
-	input.shuffle
+	start = input.shuffle
 end

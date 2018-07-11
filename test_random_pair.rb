@@ -13,8 +13,9 @@ class TestRandomPairing < Minitest::Test
 
     def test_refute_that_input_is_same
     	refute_equal(["bill", "sally", "jim", "mary", "mike"], pairing(["bill", "sally", "jim", "mary", "mike"]))
+    	refute_equal(["bill", "sally", "jim",], pairing(["bill", "sally", "jim",]))
+    	refute_equal(["bill", "sally", "jim", "mary", "mike", "jack", "willie"], pairing(["bill", "sally", "jim", "mary", "mike", "jack", "willie"]))
     end
-
 end
 
     

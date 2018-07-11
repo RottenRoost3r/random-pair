@@ -18,10 +18,16 @@ class TestRandomPairing < Minitest::Test
     	assert_equal(2, pairing(input).length)
     end
 
-    def test_that_outcome_is_even_multi_array
+    def test_that_outcome_is_even_multi_array_2
     	input = ["bill", "sally", "jim", "mary", "jack", "linda"]
     	assert_equal(3, pairing(input).length)
     end
+
+    def test_that_outcome_on_odd_number_is_added_to_last_array
+    	input = ["bill", "sally", "jim", "mary", "jack", "linda", "joe"]
+    	assert_equal(3, pairing(input).length)
+    end
 end
+
 
     
